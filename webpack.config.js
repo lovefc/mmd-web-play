@@ -85,7 +85,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-			   { from: 'model', to: 'assgin/model' },
+			   { from: 'model', to: 'model' },
 			   { from: 'src/common', to: 'assgin/js' },
 			]
         }),
