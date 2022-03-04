@@ -1,4 +1,5 @@
 ## mmd-web播放器
+
 ### 使用方法
 先克隆此项目
 到项目根目录执行 npm install
@@ -9,3 +10,7 @@
 npm run watch
 
 nginx|apache 绑定dist目录,然后访问即可
+
+我这里的node版本是16
+
+请不要使用低版本的node
