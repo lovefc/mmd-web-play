@@ -1,22 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const MMDPlayer_1 = require("./js/MMDPlayer");
+const play_1 = require("./js/play.js");
 
+let modelFile = 'model/kizunaai/kizunaai.pmx'; //人物模型
+let cameraFile = 'model/qsx/jt.vmd';// 镜头
+let musicFile = 'model/qsx/qsx.mp3'; // 音乐
+let vmdFile = "model/qsx/dz.vmd"; // 动作
+let stageFile = "model/gufengwutai/wt.pmx"; // 舞台
 
-let mmdplayer = new MMDPlayer_1.default();
-mmdplayer.modeFile = modelFile;
-mmdplayer.cameraFile = cameraFile;
-mmdplayer.musicFile = musicFile;
-mmdplayer.vmdFile = vmdFile;
-mmdplayer.stageFile = stageFile;
+let play = new play_1.default();
+play.modeFile = modelFile;
+play.cameraFile = cameraFile;
+play.musicFile = musicFile;
+play.vmdFile = vmdFile;
+play.stageFile = stageFile;
 
-
-
-
-window.addEventListener('resize', function () { mmdplayer.resize(window.innerWidth, window.innerHeight); }, false);
+window.addEventListener('resize', function () { play.resize(window.innerWidth, window.innerHeight); }, false);
 // 加载进度
 function onProgress(item, loaded, total) {
-    console.log(item);
+    //console.log(item);
     document.getElementById("loding-text").innerText = ((loaded / total) * 100).toFixed(0) + " %";
 }
 // 开始事件
@@ -25,10 +27,10 @@ function onLoad() {
     document.getElementById("loading-image").style.display = "none";
     document.getElementById("loding-text").onclick = function () {
         document.getElementById("loding-text").innerText = "物理初始化";
-        mmdplayer.init();
-        setTimeout(() => { document.getElementById("loading").style.display = "none"; mmdplayer.play(); }, 5000);
+        play.init();
+        setTimeout(() => { document.getElementById("loading").style.display = "none"; play.play(); }, 5000);
     };
 }
-let manager = mmdplayer.load();
+let manager = play.load();
 manager.onProgress = onProgress;
 manager.onLoad = onLoad;
