@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>mmd-web-play</title>
+</head>
+
+<body>
+    <div id="main-div">
+        <div id="loading">
+            <div class="spinner" style="display:none" id="loading-image"></div>
+            <p id="loding-text">请打开js</p>
+            <p>加载页面大约需要一分钟</p>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#loding-text").textContent = "loding files..."
+        document.getElementById("loading-image").style.display = "block";
+    </script>
+    <script src="assgin/js/mmdparser.js"></script>
+    <script src="assgin/js/ammo.js"></script>		
+</body>
+</html>
