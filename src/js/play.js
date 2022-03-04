@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const THREE = require("three");
-const Stats = require("stats.js");
+//const Stats = require("stats.js"); // 状态栏
 require("imports-loader?THREE=three!../../node_modules/three/examples/js/loaders/TGALoader.js");
 require("imports-loader?THREE=three!../../node_modules/three/examples/js/loaders/MMDLoader.js");
 require("imports-loader?THREE=three!../../node_modules/three/examples/js/animation/MMDPhysics.js");
 require("imports-loader?THREE=three!../../node_modules/three/examples/js/animation/CCDIKSolver.js");
-class MMDPlayer {
+class play {
     constructor() {
         this.toAdd = new Array();
         this.vmdFile = null;
@@ -57,6 +57,7 @@ class MMDPlayer {
         this.scene.add(this.directionalLight);
         this.mmdHelper = new THREE.MMDHelper();
     }
+	// 加载
     load() {
         var manager = new THREE.LoadingManager();
         var loader = new THREE.MMDLoader(manager);
@@ -99,6 +100,7 @@ class MMDPlayer {
         }.bind(this));
         return manager;
     }
+	// 初始化
     init() {
         this.toAdd.forEach(function (item) {
             this.scene.add(item);
@@ -107,36 +109,41 @@ class MMDPlayer {
         this.addToBrowser();
         this._render.render(this.scene, this.camera);
     }
+	// 播放
     play() {
         this.clock = new THREE.Clock();
         this._render.domElement.style.display = "block";
-        MMDPlayer.animate(this);
+        play.animate(this);
     }
+	// 自适应大小
     resize(width, height) {
         this._render.setSize(width, height);
         this.camera.aspect = width / height;
         this.camera.updateMatrix();
     }
+	// 动画
     static animate(object) {
         object.render();
-        var stats = new Stats();
-        stats.showPanel(1);
-        document.body.appendChild(stats.dom);
+        //var stats = new Stats();
+        //stats.showPanel(1);
+        //document.body.appendChild(stats.dom);
         requestAnimationFrame(function lambda() {
-            stats.begin();
+            //stats.begin();
             object.render();
-            stats.end();
+            //stats.end();
             requestAnimationFrame(lambda);
         });
     }
+	// 渲染到浏览器
     addToBrowser() {
         this._render.domElement.style.display = "none";
         document.querySelector("#main-div").appendChild(this._render.domElement);
     }
+	// 重载
     render() {
         var delta = this.clock.getDelta();
         this.mmdHelper.animate(delta);
         this._render.render(this.scene, this.camera);
     }
 }
-exports.default = MMDPlayer;
+exports.default = play;
