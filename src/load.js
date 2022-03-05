@@ -1,8 +1,3 @@
-/*
- * @Author       : lovefc
- * @Date         : 2022-03-04 23:26:44
- * @LastEditTime : 2022-03-05 12:08:27
- */
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const play_1 = require("./js/play.js");

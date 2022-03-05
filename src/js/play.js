@@ -57,7 +57,7 @@ class play {
         this.scene.add(this.directionalLight);
         this.mmdHelper = new THREE.MMDHelper();
     }
-	// 加载
+    // 加载
     load() {
         var manager = new THREE.LoadingManager();
         var loader = new THREE.MMDLoader(manager);
@@ -83,7 +83,6 @@ class play {
         loader.loadAudio(this.musicFile, function (audio, listener) {
             listener.position.z = 1;
             this.mmdHelper.setAudio(audio, listener, { delayTime: 0.0 });
-            // this.toAdd.push(audio);
             this.toAdd.push(listener);
         }.bind(this));
         loader.loadModel(this.stageFile, function (mesh) {
@@ -100,7 +99,7 @@ class play {
         }.bind(this));
         return manager;
     }
-	// 初始化
+    // 初始化
     init() {
         this.toAdd.forEach(function (item) {
             this.scene.add(item);
@@ -109,19 +108,19 @@ class play {
         this.addToBrowser();
         this._render.render(this.scene, this.camera);
     }
-	// 播放
+    // 播放
     play() {
         this.clock = new THREE.Clock();
         this._render.domElement.style.display = "block";
         play.animate(this);
     }
-	// 自适应大小
+    // 自适应大小
     resize(width, height) {
         this._render.setSize(width, height);
         this.camera.aspect = width / height;
         this.camera.updateMatrix();
     }
-	// 动画
+    // 动画
     static animate(object) {
         object.render();
         //var stats = new Stats();
@@ -134,12 +133,12 @@ class play {
             requestAnimationFrame(lambda);
         });
     }
-	// 渲染到浏览器
+    // 渲染到浏览器
     addToBrowser() {
         this._render.domElement.style.display = "none";
         document.querySelector("#main-div").appendChild(this._render.domElement);
     }
-	// 重载
+    // 重载
     render() {
         var delta = this.clock.getDelta();
         this.mmdHelper.animate(delta);
