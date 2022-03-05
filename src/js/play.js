@@ -9,7 +9,7 @@ require("imports-loader?THREE=three!../../node_modules/three/examples/js/animati
 class play {
     constructor() {
         this.toAdd = new Array();
-        this.vmdFile = null;
+        this.motionFile = null;
         this.stageFile = null;
         this.mmdHelper = null;
         this.modeFile = null;
@@ -61,7 +61,7 @@ class play {
     load() {
         var manager = new THREE.LoadingManager();
         var loader = new THREE.MMDLoader(manager);
-        loader.load(this.modeFile, [this.vmdFile], function (mesh) {
+        loader.load(this.modeFile, [this.motionFile], function (mesh) {
             var mikuModel = mesh;
             var materials = mesh.material;
             for (var i = 0, il = materials.length; i < il; i++) {

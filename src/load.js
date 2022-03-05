@@ -1,3 +1,8 @@
+/*
+ * @Author       : lovefc
+ * @Date         : 2022-03-04 23:26:44
+ * @LastEditTime : 2022-03-05 12:08:27
+ */
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const play_1 = require("./js/play.js");
@@ -5,14 +10,14 @@ const play_1 = require("./js/play.js");
 let modelFile = 'model/kizunaai/kizunaai.pmx'; //人物模型
 let cameraFile = 'model/qsx/jt.vmd';// 镜头
 let musicFile = 'model/qsx/qsx.mp3'; // 音乐
-let vmdFile = "model/qsx/dz.vmd"; // 动作
+let motionFile = "model/qsx/dz.vmd"; // 动作
 let stageFile = "model/gufengwutai/wt.pmx"; // 舞台
 
 let play = new play_1.default();
 play.modeFile = modelFile;
 play.cameraFile = cameraFile;
 play.musicFile = musicFile;
-play.vmdFile = vmdFile;
+play.motionFile = motionFile;
 play.stageFile = stageFile;
 
 window.addEventListener('resize', function () { play.resize(window.innerWidth, window.innerHeight); }, false);

@@ -1,3 +1,8 @@
+<!--
+ * @Author       : lovefc
+ * @Date         : 2022-03-04 23:26:44
+ * @LastEditTime : 2022-03-05 12:09:51
+-->
 ##  mmd-web-play-mmd播放器
 
 ![demo](./demo.png)
@@ -38,7 +43,7 @@ nginx|apache绑定dist目录,然后访问即可
 let modelFile = 'model/kizunaai/kizunaai.pmx'; //人物模型
 let cameraFile = 'model/qsx/jt.vmd';// 镜头
 let musicFile = 'model/qsx/qsx.mp3'; // 音乐
-let vmdFile = "model/qsx/dz.vmd"; // 动作
+let motionFile = "model/qsx/dz.vmd"; // 动作
 let stageFile = "model/gufengwutai/wt.pmx"; // 舞台
 ```
 ### 使用须知
