@@ -41,6 +41,9 @@ let musicFile = 'model/qsx/qsx.mp3'; // 音乐
 let motionFile = "model/qsx/dz.vmd"; // 动作
 let stageFile = "model/gufengwutai/wt.pmx"; // 舞台
 ```
+
+>每次更改后，需要重新打包
+
 ### 使用须知
 
 模型都会涉及到版权问题，请勿将没有商业版权或者进行二次修改的模型进行盈利
