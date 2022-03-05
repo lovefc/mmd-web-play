@@ -17,20 +17,20 @@
  然后在执行
 
 ```
-npm install webpack -g
+npm install webpack webpack-cli -g
 ```
 
 接着开始编译
 
 ```
-npm run watch
+npm run build
 ```
 
 nginx|apache绑定dist目录,然后访问即可
 
-我这里的node版本是16
+>我这里的node版本是16.14.0
 
-请不要使用低版本的node
+>请不要使用低版本的node
 
 ### 更改配置
 打开src/load.js修改这里，注意模型文件要放在model目录下
