@@ -1,5 +1,7 @@
 ##  mmd-web播放器
 
+![demo](./demo.png)
+
 演示地址：[http://pmx.fcup.top](http://pmx.fcup.top/)
 
 模型越大，加载的时间会越长，显卡如果不行，也会造成卡顿
@@ -40,5 +42,7 @@ let vmdFile = "model/qsx/dz.vmd"; // 动作
 let stageFile = "model/gufengwutai/wt.pmx"; // 舞台
 ```
 ### 使用须知
+
 模型都会涉及到版权问题，请勿将没有商业版权的模型用于盈利
+
 本人将不负任何责任
