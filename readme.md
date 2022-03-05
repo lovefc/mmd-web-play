@@ -1,4 +1,4 @@
-##  mmd-web-play-mmd播放器
+# mmd-web-play 
 
 ![demo](./demo.png)
 
