@@ -1,12 +1,12 @@
 {
-    "name": "mmd",
+    "name": "mmd-web-play",
     "version": "1.0.0",
-    "description": "",
+    "description": "开源的mmd-web播放器",
     "scripts": {
         "watch": "webpack -w",
         "build": "webpack"
     },
-    "author": "",
+    "author": "lovefc",
     "license": "ISC",
     "dependencies": {
         "@babel/preset-env": "^7.16.11",
