@@ -44,18 +44,10 @@ let stageFile = "model/gufengwutai/wt.pmx"; // 场景
 
 >每次更改后，需要重新打包
 
-### 模型分享
-
-[收集的一些模型，以供下载，演示](http://mmd.fcup.top)
-
 ### 使用须知
 
 模型都会涉及到版权问题，请勿将没有商业版权或者进行二次修改的模型进行盈利
 
 本人将不负任何责任，模型拥有者将有权进行追责
 
-### 求点猫粮
-
->先谢谢各位老板
-
-![demo](./donation.jpg)
+本项目fork于: https://github.com/Sasasu/MMDPlayer-web
